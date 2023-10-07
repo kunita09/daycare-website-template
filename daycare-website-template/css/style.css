@@ -166,8 +166,20 @@ h6,
 }
 /*** Topbar End ***/
 
+.container{
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: center;
+    justify-items: center;
+}
 
 /*** Navbar Start ***/
+.container{
+    max-width: 100%;
+    background-color: rgb(255, 223, 223);
+}
 .navbar {
     border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
@@ -196,10 +208,10 @@ h6,
 }
 
 .logo{
-    width: 60px;
-    height: 60px;
-    border-radius: 15%;
+    width: 50%;
     border: 0;
+    margin-left: 5%;
+
    
 }
 
