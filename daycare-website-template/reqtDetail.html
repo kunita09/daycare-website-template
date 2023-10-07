@@ -27,7 +27,11 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
+    <style>
+        .secdetaill{
+            width: 100px;
+        }
+    </style>
 
 
 </head>
@@ -77,26 +81,75 @@
 
     <!-- Navbar End -->
 
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Sex</th>
-            <th>Birth Date</th>
-            <th>Expertise</th>
-            <th>Action</th>
-        </tr>
-        <tr th:each="employee : ${employees}">
-            <td th:text="${employee.id}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.lastName}"></td>
-            <td th:text="${employee.sex}"></td>
-            <td th:text="${employee.birthDate}"></td>
-            <td th:text="${employee.expertises}"></td>
-            
-        </tr>
-    </table>
+    
+        <!-- Display collected data here -->
+        
+        
+       
+
+        <table class="content">
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">หมายเลขเอกสาร</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">วันที่ยื่นคำร้อง</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">ประเภท</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">ชื่อ</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">รหัสสมาชิก</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">จำนวนเงิน</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">เหตุผลยื่นคำร้อง</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">ผู้รับผิดชอบ</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+        </table>
+        <a href="status.html">ย้อนกลับ</a>
+        <button style="font-size: 1.2rem;" type="button" onclick="submitForm()">
+            <a href="status.html">อนุมัติ</a></button>
+        
+
+
+
+        <script>
+            // Add an event listener to the form
+            document.getElementById("myForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the default form submission behavior
+    
+                // Collect form data
+                var reqtId = document.getElementById("reqtId").value;
+                var firstName = document.getElementById("Name").value;
+                var memberId = document.getElementById("lastName").value;
+                var money = document.getElementById("money").value;
+                var objective = document.getElementById("objective").value;
+    
+                // Display collected data on the screen
+                document.getElementById("displayReqtId").textContent = reqtId;
+                document.getElementById("displayFirstName").textContent = firstName;
+                document.getElementById("displayMemberId").textContent = memberId;
+                document.getElementById("displayMoney").textContent = money;
+                document.getElementById("displayObjective").textContent = objective;
+            });
+        </script>
+    
+    <!-- reqt detail end -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>

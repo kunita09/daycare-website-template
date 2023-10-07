@@ -257,13 +257,14 @@ Navbar End ***/
 /*** Hero Header ***/
 .hero-header,
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05)), url(../img/hero-img.jpg);
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05)), url(../img/main_img.jpg); */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url(../img/main_img.jpg);
+    background-size: 100% 100%;
+    height: 700px;
 }
-/*** Hero Header ***/
-
 
 /*** About Start ***/
 .video {
