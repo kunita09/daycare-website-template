@@ -65,10 +65,11 @@
             font-family: 'Fredoka', sans-serif;
             text-align: center;
             font-size: 24px;
-            color: #333;
-            padding-top: 20px;
+            color: #2c2257;
+            padding-top: 40px;
             padding-left: 10px;
-            font-size: 1.8rem;
+            padding-bottom: 10px;
+            font-size: 2rem;
         }
 
         form {
@@ -91,8 +92,8 @@
             padding: 10px;
             margin-top: 6px;
             margin-bottom: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            border: 1px solid #e7e7e7;
+            border-radius: 8px;
             font-size: 16px;
         }
 
@@ -112,6 +113,7 @@
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s ease;
+            border-radius: 8px;
         }
 
         form button:hover {
@@ -152,7 +154,7 @@
 
             </div>
             <div class="navbar-nav login">
-                <a href="#" class="navbar nav-link">เข้าสู่ระบบ</a>
+                <a href="./login.html" class="navbar nav-link">เข้าสู่ระบบ</a>
             </div>
             <button class="btn-search btn btn-primary btn-md-square rounded-circle" data-bs-toggle="modal"
                 data-bs-target="#searchModal"><i class="fas fa-search text-white"></i></button>
@@ -165,25 +167,25 @@
     <div class="wrapper">
         <h1>ลงทะเบียน</h1>
         <form id="personalInfoForm">
-            <label for="idCard">รหัสบัตรประชาชน* :</label>
+            <label for="idCard">รหัสบัตรประชาชน* </label>
             <input type="text" id="idCard" name="idCard" required><br>
 
-            <label for="firstName">ชื่อ:</label>
+            <label for="firstName">ชื่อ</label>
             <input type="text" id="firstName" name="firstName" required><br>
 
-            <label for="lastName">นามสกุล:</label>
+            <label for="lastName">นามสกุล</label>
             <input type="text" id="lastName" name="lastName" required><br>
 
-            <label for="address">ที่อยู่:</label>
+            <label for="address">ที่อยู่</label>
             <textarea id="address" name="address" required></textarea><br>
 
-            <label for="phoneNumber">เบอร์โทรศัพท์:</label>
+            <label for="phoneNumber">เบอร์โทรศัพท์</label>
             <input type="tel" id="phoneNumber" name="phoneNumber" required><br>
 
-            <label for="password">รหัสผ่าน:</label>
+            <label for="password">รหัสผ่าน</label>
             <input type="password" id="password" name="password" required><br>
 
-            <label for="Confirmpassword">ยืนยันรหัสผ่าน:</label>
+            <label for="Confirmpassword">ยืนยันรหัสผ่าน</label>
             <input type="password" id="Confirmpassword" name="Confirmpassword" required><br>
 
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere minus, dolorum voluptatem optio, ut,
@@ -195,7 +197,7 @@
 
             <input type="checkbox" id="agree" name="agree" value="agree" required>
             <label for="agree">ยอมรับ</label><br>
-            <button style="font-size: 1.2rem;" type="button" onclick="submitForm()">บันทึกข้อมูล</button>
+            <button style="font-size: 1.3rem;" type="button" onclick="submitForm()">บันทึกข้อมูล</button>
         </form>
     </div>
 

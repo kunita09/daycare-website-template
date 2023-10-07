@@ -1,4 +1,16 @@
 
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Mitr:wght@300&family=Nunito&display=swap');
+
+*{
+    font-family: 'Kanit', sans-serif;
+}
+
+.wrapper h1{
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+}
+
 /*** Spinner Start ***/
 #spinner {
     opacity: 0;
@@ -28,7 +40,7 @@
     transition: 0.5s;
     z-index: 99;
 }
-
+/* 
 h1,
 h2,
 h3,
@@ -47,7 +59,7 @@ h6,
 .h6 {
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-}
+} */
 
 .display-1,
 .display-2,
