@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ReqDetail</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+        .content {
+            display: flex;
+            width: 100%;
+            height: auto;
+            padding: 0 30%;
+            background-color: #ffecf2 ;
+        }
+        
+        table th{
+            width: 100%;
+        }
+        td{
+            border-bottom: solid 1px;
+            background-color: antiquewhite;
+        }
+        
+        tr{
+           
+            
+        }
+
+        th {
+            width: 100px;
+        }
+        button {
+            width: 20%;
+            background-color: #ff4880;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            float: right;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .content button a{
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            
+        }
+
+        .content button a:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .save{
+            margin-right: 17%;
+        }
+        
+        
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+     <!-- Nav -->
+     <div class="container px-0 mx-0 w-100">
+        <nav class="navbar navbar-light navbar-expand-xl py-4 px-4 border-bottom-5 border-dark">
+            <a href="index.html" class="navbar-brand">
+                <img src="http://www.villagefund.or.th//app-assets/images/villagefund_1.png" class="logo" alt="logo">
+            </a>
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse float-end" id="navbarCollapse">
+                <div class="navbar-nav ms-auto ">
+                    <a href="index.html" class="nav-item nav-link">หน้าหลัก</a>
+                    <a href="about.html" class="nav-item nav-link">เกี่ยวกับ</a>
+                    <a href="#" class="nav-item nav-link">สมาชิก</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ธุรกรรม</a>
+                        <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                            <a href="./request.html" class="dropdown-item">ยื่นคำร้อง</a>
+                            <a href="#" class="dropdown-item">ตรวจสอบสถานะ</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">ติดต่อเรา</a>
+                </div>
+
+            </div>
+            <div class="navbar-nav login">
+                <a href="./login.html" class="navbar nav-link">เข้าสู่ระบบ</a>
+            </div>
+            <button class="btn-search btn btn-primary btn-md-square rounded-circle" data-bs-toggle="modal"
+                data-bs-target="#searchModal"><i class="fas fa-search text-white"></i></button>
+    </div>
+    </nav>
+    </div>
+    </div>
+    
+        <!-- Display collected data here -->
+        
+        
+       
+
+        <table class="content" border="1">
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">หมายเลขเอกสาร</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">วันที่ยื่นคำร้อง</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">ประเภท</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">ชื่อ</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">รหัสสมาชิก</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">จำนวนเงิน</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">เหตุผลยื่นคำร้อง</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+            <tr th:each="# : ${#}">
+                <th class="secdetaill">ผู้รับผิดชอบ</th>
+                <td th:text="${employee.firstName}"></td>
+            </tr>
+        </table>
+        <a href="status.html">ย้อนกลับ</a>
+        <button style="font-size: 1.2rem;" type="button" onclick="submitForm()">
+            <a href="status.html">อนุมัติ</a></button>
+        
+
+
+
+        <script>
+            // Add an event listener to the form
+            document.getElementById("myForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the default form submission behavior
+    
+                // Collect form data
+                var reqtId = document.getElementById("reqtId").value;
+                var firstName = document.getElementById("Name").value;
+                var memberId = document.getElementById("lastName").value;
+                var money = document.getElementById("money").value;
+                var objective = document.getElementById("objective").value;
+    
+                // Display collected data on the screen
+                document.getElementById("displayReqtId").textContent = reqtId;
+                document.getElementById("displayFirstName").textContent = firstName;
+                document.getElementById("displayMemberId").textContent = memberId;
+                document.getElementById("displayMoney").textContent = money;
+                document.getElementById("displayObjective").textContent = objective;
+            });
+        </script>
+    
+    <!-- reqt detail end -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

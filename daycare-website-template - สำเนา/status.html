@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>หน้าหลัก</title>
+    <title>แสดงสถานะ</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -27,11 +27,21 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .status{
+            background-color: aqua;
+            width: 100%;
+        }
+        table{
+            width: 100%;
+            height: auto;
+        }
+        .title{
+            grid-column: 3;
+        }
+    </style>
 
 
-
-
-    
 </head>
 
 <body>
@@ -79,6 +89,27 @@
     </div>
     </div>
 
+
+    <div class="status">
+        <table >
+            <h5>รายการยื่นคำร้อง</h5>
+            <tr class="title">
+                <th>ลำดับ</th>
+                <th>ประเภท</th>
+                <th>รายละเอียด</th>
+            </tr>
+            <tr th:each="# : ${#}">
+                <td th:text="${#}"></td>
+                <td th:text="${#}"></td>
+                <td>
+                    <a th:href="@{'/reqtDetail/' + ${employee.id}}" href="reqtDetail"> <!-- Link to reqtDetail with employee ID -->
+                        <button>ดูรายละเอียด</button>
+                    </a>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
 
