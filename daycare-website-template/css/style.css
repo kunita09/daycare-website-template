@@ -166,10 +166,24 @@ h6,
 }
 /*** Topbar End ***/
 
+.container{
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: center;
+    justify-items: center;
+}
 
 /*** Navbar Start ***/
+.container{
+    max-width: 100%;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 5px #dfdfdf;
+}
 .navbar {
     border-bottom: 1px solid rgba(255, 255, 255, .1);
+    
 }
 
 .navbar .navbar-nav .nav-link {
@@ -196,17 +210,14 @@ h6,
 }
 
 .logo{
-    width: 60px;
-    height: 60px;
-    border-radius: 15%;
+    width: 50%;
     border: 0;
-   
+    margin-left: 5%;
 }
 
 .login{
     border-radius: 10%;
     border: 0;
-    background-color: rgb(255, 112, 188);
     margin-right: 15px;
 }
 
@@ -232,8 +243,8 @@ h6,
 }
 
 .dropdown .dropdown-menu a:hover {
-    background: var(--bs-secondary);
-    color: var(--bs-primary);
+    background: var(--bs-primary);
+    color: var(--bs-white); 
 }
 
 .navbar .nav-item:hover .dropdown-menu {
