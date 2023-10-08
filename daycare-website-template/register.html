@@ -29,30 +29,20 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/detail.css" rel="stylesheet">
+
     <style>
 
         body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            height: auto;
-            /*ackground-color: #ffffffbb;*/
-            background-color: #fde9f0 ;
-            
-        }
+            background-color: rgba(232, 232, 232, 0.503);
+        }     
 
-        .container{
-            width: 100%;
-        }
-        
         .wrapper{
             /*background-color: linear-gradient(rgba(255, 72, 128, 0.05), rgba(255, 72, 128, 0.2));*/
-            /*background-color: #fde9f0 ;*/
-            background-color: white;
+            background-color: #ffecf2 ;
             border-radius: 20px;
+            border: solid 1px #ff4880;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(160, 160, 160, 0.2);
+            box-shadow: 0 4px 8px rgba(41, 41, 41, 0.2);
         }
 
         .wrapper {
@@ -67,14 +57,13 @@
             font-family: 'Fredoka', sans-serif;
             text-align: center;
             font-size: 24px;
-            color: #2c2257;
-            padding-top: 40px;
+            color: #333;
             padding-left: 10px;
-            padding-bottom: 10px;
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
 
         form {
+
             padding: 20px 50px 50px;
             font-size: 1.2rem;
             
@@ -94,9 +83,8 @@
             padding: 10px;
             margin-top: 6px;
             margin-bottom: 16px;
-            border: 1px solid #e7e7e7;
-            background-color: #eeeeee;
-            border-radius: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
             font-size: 16px;
         }
 
@@ -109,19 +97,20 @@
             background-color: #ff4880;
             color: #fff;
             border: none;
-            border-radius: 4px;
+            border-radius: 10px;
             padding: 20px 20px;
             margin: 0 15% 0 15% ;
             margin-top: 50px;
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s ease;
-            border-radius: 8px;
         }
 
         form button:hover {
             background-color: #0056b3;
         }
+
+
 
     </style>
 
@@ -129,9 +118,12 @@
 
 <body>
 
-     <!-- Nav -->
-     <div class="container px-0 mx-0 w-100">
-        <nav class="navbar navbar-light navbar-expand-xl py-4 px-4 border-bottom-5 border-dark">
+
+    <!-- Nav -->
+    <!-- <div class="container px-0 border-bottom-5 border-dark mx-0 w-100"> -->
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-xl py-4 px-4 border-bottom-5 ">
+        <!-- <nav class="navbar navbar-light navbar-expand-xl py-4 px-4 border-bottom-5 border-dark"> -->
             <a href="index.html" class="navbar-brand">
                 <img src="http://www.villagefund.or.th//app-assets/images/villagefund_1.png" class="logo" alt="logo">
             </a>
@@ -145,10 +137,12 @@
                     <a href="about.html" class="nav-item nav-link">เกี่ยวกับ</a>
                     <a href="#" class="nav-item nav-link">สมาชิก</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ธุรกรรม</a>
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">ธุรกรรม</a>
                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                            <a href="./request.html" class="dropdown-item">ยื่นคำร้อง</a>
-                            <a href="#" class="dropdown-item">ตรวจสอบสถานะ</a>
+                            <a href="#" class="dropdown-item ">ฝากเงิน</a>
+                            <a href="#" class="dropdown-item">ถอนเงิน</a>
+                            <a href="#" class="dropdown-item">ยื่นสัญญากู้</a>
+                            <!-- <a href="#" class="dropdown-item"> </a> -->
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">ติดต่อเรา</a>
@@ -156,7 +150,7 @@
 
             </div>
             <div class="navbar-nav login">
-                <a href="./login.html" class="navbar nav-link">เข้าสู่ระบบ</a>
+                <a href="#" class="navbar nav-link">เข้าสู่ระบบ</a>
             </div>
             <button class="btn-search btn btn-primary btn-md-square rounded-circle" data-bs-toggle="modal"
                 data-bs-target="#searchModal"><i class="fas fa-search text-white"></i></button>
@@ -169,25 +163,25 @@
     <div class="wrapper">
         <h1>ลงทะเบียน</h1>
         <form id="personalInfoForm">
-            <label for="idCard">รหัสบัตรประชาชน* </label>
+            <label for="idCard">รหัสบัตรประชาชน* :</label>
             <input type="text" id="idCard" name="idCard" required><br>
 
-            <label for="firstName">ชื่อ</label>
+            <label for="firstName">ชื่อ:</label>
             <input type="text" id="firstName" name="firstName" required><br>
 
-            <label for="lastName">นามสกุล</label>
+            <label for="lastName">นามสกุล:</label>
             <input type="text" id="lastName" name="lastName" required><br>
 
-            <label for="address">ที่อยู่</label>
+            <label for="address">ที่อยู่:</label>
             <textarea id="address" name="address" required></textarea><br>
 
-            <label for="phoneNumber">เบอร์โทรศัพท์</label>
+            <label for="phoneNumber">เบอร์โทรศัพท์:</label>
             <input type="tel" id="phoneNumber" name="phoneNumber" required><br>
 
-            <label for="password">รหัสผ่าน</label>
+            <label for="password">รหัสผ่าน:</label>
             <input type="password" id="password" name="password" required><br>
 
-            <label for="Confirmpassword">ยืนยันรหัสผ่าน</label>
+            <label for="Confirmpassword">ยืนยันรหัสผ่าน:</label>
             <input type="password" id="Confirmpassword" name="Confirmpassword" required><br>
 
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere minus, dolorum voluptatem optio, ut,
@@ -199,7 +193,7 @@
 
             <input type="checkbox" id="agree" name="agree" value="agree" required>
             <label for="agree">ยอมรับ</label><br>
-            <button style="font-size: 1.3rem;" type="button" onclick="submitForm()">บันทึกข้อมูล</button>
+            <button style="font-size: 1.2rem;" type="button" onclick="submitForm()">บันทึกข้อมูล</button>
         </form>
     </div>
 
@@ -255,6 +249,9 @@
     </script>
 
     <div id="result"></div>
+
+
+
 
 
 </body>

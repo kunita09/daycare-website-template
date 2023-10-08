@@ -1,17 +1,4 @@
 
-
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Mitr:wght@300&family=Nunito&display=swap');
-
-*{
-    font-family: 'Kanit', sans-serif;
-    text-decoration: none;
-}
-
-.wrapper h1{
-    font-family: 'Kanit', sans-serif;
-    font-weight: bold;
-}
-
 /*** Spinner Start ***/
 #spinner {
     opacity: 0;
@@ -41,7 +28,7 @@
     transition: 0.5s;
     z-index: 99;
 }
-/* 
+
 h1,
 h2,
 h3,
@@ -60,7 +47,7 @@ h6,
 .h6 {
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-} */
+}
 
 .display-1,
 .display-2,
@@ -179,16 +166,24 @@ h6,
 }
 /*** Topbar End ***/
 
+.container{
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: center;
+    justify-items: center;
+}
 
 /*** Navbar Start ***/
 .container{
     max-width: 100%;
-    background-color: white;
-    box-shadow: 0 5px 10px rgb(228, 228, 228);
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 5px #dfdfdf;
 }
-
 .navbar {
-    /* border-bottom: 1px solid rgba(255, 255, 255, .1); */
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    
 }
 
 .navbar .navbar-nav .nav-link {
@@ -215,9 +210,9 @@ h6,
 }
 
 .logo{
-    width: 55%;
+    width: 50%;
     border: 0;
-    margin-left: 5%; 
+    margin-left: 5%;
 }
 
 .login{
@@ -249,12 +244,8 @@ h6,
 
 .dropdown .dropdown-menu a:hover {
     background: var(--bs-primary);
-    color: var(--bs-white);
-    transition: .3s;
+    color: var(--bs-white); 
 }
-
-
-
 
 .navbar .nav-item:hover .dropdown-menu {
     transform: rotateX(0deg);
@@ -277,14 +268,13 @@ Navbar End ***/
 /*** Hero Header ***/
 .hero-header,
 .page-header {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05)), url(../img/main_img.jpg); */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05)), url(../img/hero-img.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../img/main_img.jpg);
-    background-size: 100% 100%;
-    height: 700px;
 }
+/*** Hero Header ***/
+
 
 /*** About Start ***/
 .video {
